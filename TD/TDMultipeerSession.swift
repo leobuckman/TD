@@ -8,18 +8,7 @@
 import MultipeerConnectivity
 import os
 
-enum Move: String, CaseIterable, CustomStringConvertible {
-    case rock, paper, scissors, unknown
-    
-    var description : String {
-        switch self {
-        case .rock: return "Rock"
-        case .paper: return "Paper"
-        case .scissors: return "Scissors"
-        default: return "Thinking"
-        }
-      }
-}
+
 
 class TDMultipeerSession: NSObject, ObservableObject {
     
@@ -36,7 +25,6 @@ class TDMultipeerSession: NSObject, ObservableObject {
     private let log = Logger()
     @Published var receivedWords: [String] = []
     @Published var availablePeers: [MCPeerID] = []
-    @Published var receivedMove: Move = .unknown
     @Published var recvdInvite: Bool = false
     @Published var recvdInviteFrom: MCPeerID? = nil
     @Published var paired: Bool = false
@@ -82,16 +70,6 @@ class TDMultipeerSession: NSObject, ObservableObject {
             // Re-initialize participant statuses if the number of peers changes
             initializeParticipantStatuses()
         }
-    func send(move: Move) {
-        if !session.connectedPeers.isEmpty {
-            log.info("sendMove: \(String(describing: move)) to \(self.session.connectedPeers[0].displayName)")
-            do {
-                try session.send(move.rawValue.data(using: .utf8)!, toPeers: session.connectedPeers, with: .reliable)
-            } catch {
-                log.error("Error sending: \(String(describing: error))")
-            }
-        }
-    }
     func broadcastParticipantStatuses() {
         print("Broadcasting participant statuses: \(participantStatuses)")
 
@@ -214,18 +192,6 @@ extension TDMultipeerSession: MCSessionDelegate {
         } else {
             print("Error: Data received is neither WordsAndIndex nor Participant Statuses")
         }
-    
-        /*
-        if let string = String(data: data, encoding: .utf8), let move = Move(rawValue: string) {
-            log.info("didReceive move \(string)")
-            // We received a move from the opponent, tell the GameView
-            DispatchQueue.main.async {
-                self.receivedMove = move
-            }
-        } else {
-            log.info("didReceive invalid value \(data.count) bytes")
-        }
-         */
     }
     
     public func session(_ session: MCSession, didReceive stream: InputStream, withName streamName: String, fromPeer peerID: MCPeerID) {
