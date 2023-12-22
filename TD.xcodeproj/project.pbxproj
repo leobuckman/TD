@@ -27,7 +27,6 @@
 		D8D291052892FD49002F8A2E /* TDMultipeerSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D291032892FD49002F8A2E /* TDMultipeerSession.swift */; };
 		D8D291082893118C002F8A2E /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D291072893118C002F8A2E /* StartView.swift */; };
 		D8D291092893118C002F8A2E /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D291072893118C002F8A2E /* StartView.swift */; };
-		D8E7EFE42894B58E006C0F86 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E7EFE32894B58E006C0F86 /* GameView.swift */; };
 		D8E7EFE628970B5C006C0F86 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = D8E7EFE528970B5C006C0F86 /* LICENSE */; };
 /* End PBXBuildFile section */
 
@@ -72,7 +71,6 @@
 		D8D291032892FD49002F8A2E /* TDMultipeerSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDMultipeerSession.swift; sourceTree = "<group>"; };
 		D8D291062893034A002F8A2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D8D291072893118C002F8A2E /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
-		D8E7EFE32894B58E006C0F86 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		D8E7EFE528970B5C006C0F86 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		D8E7EFE728970B73006C0F86 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,7 +105,6 @@
 			children = (
 				D8D291072893118C002F8A2E /* StartView.swift */,
 				D8D1F5AF28948CAE006DF828 /* PairView.swift */,
-				D8E7EFE32894B58E006C0F86 /* GameView.swift */,
 				354D6B012B2968A600466730 /* TypingView.swift */,
 				354D6B102B2A374D00466730 /* ResultsView.swift */,
 				354D6AFF2B29608800466730 /* StrikeStatusView.swift */,
@@ -327,7 +324,6 @@
 				D8D291042892FD49002F8A2E /* TDMultipeerSession.swift in Sources */,
 				354D6B132B2BA79E00466730 /* GameLogic.swift in Sources */,
 				D8D290D92892FD1E002F8A2E /* TDApp.swift in Sources */,
-				D8E7EFE42894B58E006C0F86 /* GameView.swift in Sources */,
 				D8D291082893118C002F8A2E /* StartView.swift in Sources */,
 				354019DF2B28051E00BBF2C2 /* ButtonToggle.swift in Sources */,
 				354D6B022B2968A600466730 /* TypingView.swift in Sources */,

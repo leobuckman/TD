@@ -44,7 +44,7 @@ struct TypingView: View {
                     .font(.largeTitle)
                     .foregroundStyle(.blue)
                     .multilineTextAlignment(.center)
-                    .autocapitalization(.none)
+                   // .autocapitalization(.none)
                     .disableAutocorrection(true)
                     .frame(height: 60)
                     .background(Color(red: 0.2, green: 0.2, blue: 0.2, opacity: 1.0))
@@ -108,6 +108,7 @@ struct TypingView: View {
                 if currentWordIndex < maxWords {
                     fetchNewWord()
                 } else {
+                    //print connected peers
                     printConnectedPeers()
                     isGameOver = true
                 }
